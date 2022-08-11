@@ -15,14 +15,22 @@ protocol Buildable {
 
 final class SceneBuildManager {
     
+    private let userService: UserServiceable
+    private let defaultsManager: DefaultsManagerable
+    
     init() {
+        defaultsManager = DefaultsManager()
+        userService = UserService(defaultsManager: defaultsManager)
     }
 }
 
 extension SceneBuildManager: Buildable {
     func buildSplashScreen() -> SplashViewController {
         let viewController = SplashViewController()
-        let presenter = SplashPresenter()
+        let presenter = SplashPresenter(
+            sceneBuildManager: self,
+            userService: userService
+        )
         
         viewController.presenter = presenter
         presenter.viewController = viewController
@@ -31,7 +39,7 @@ extension SceneBuildManager: Buildable {
     }
     func buildAuthScreen() -> AuthViewController {
         let viewController = AuthViewController()
-        let presenter = AuthPresenter()
+        let presenter = AuthPresenter(sceneBuildManager: self)
         
         viewController.presenter = presenter
         presenter.viewController = viewController
@@ -40,7 +48,7 @@ extension SceneBuildManager: Buildable {
     }
     func buildMainScreen() -> MainViewController {
         let viewController = MainViewController()
-        let presenter = MainPresenter()
+        let presenter = MainPresenter(sceneBuildManager: self)
         
         viewController.presenter = presenter
         presenter.viewController = viewController
@@ -49,7 +57,7 @@ extension SceneBuildManager: Buildable {
     }
     func buildSettingsScreen() -> SettingsViewController {
         let viewController = SettingsViewController()
-        let presenter = SettingsPresenter()
+        let presenter = SettingsPresenter(sceneBuildManager: self)
         
         viewController.presenter = presenter
         presenter.viewController = viewController
@@ -58,7 +66,7 @@ extension SceneBuildManager: Buildable {
     }
     func buildGameScreen() -> GameViewController {
         let viewController = GameViewController()
-        let presenter = GamePresenter()
+        let presenter = GamePresenter(sceneBuildManager: self)
         
         viewController.presenter = presenter
         presenter.viewController = viewController

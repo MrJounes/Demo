@@ -18,10 +18,28 @@ final class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewController()
     }
 }
 
 // MARK: - GameViewProtocol Impl
 extension GameViewController: GameViewProtocol {
     
+}
+
+// MARK: - Private methods
+private extension GameViewController {
+    func setupViewController() {
+        view.backgroundColor = .systemBackground
+        addSubviews()
+        setupConstraints()
+    }
+    
+    func addSubviews() {
+        
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([])
+    }
 }

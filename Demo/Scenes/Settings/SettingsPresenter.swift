@@ -15,6 +15,11 @@ final class SettingsPresenter {
     
     weak var viewController: SettingsViewProtocol?
     
+    private let sceneBuildManager: Buildable
+    
+    init(sceneBuildManager: Buildable) {
+        self.sceneBuildManager = sceneBuildManager
+    }
 }
 
 // MARK: - SettingsPresenterProtocol

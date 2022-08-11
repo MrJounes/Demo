@@ -25,6 +25,7 @@
 		57242F1B28A54DD6009231D3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57242F1A28A54DD6009231D3 /* MainPresenter.swift */; };
 		57242F1D28A54DE2009231D3 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57242F1C28A54DE2009231D3 /* SettingsPresenter.swift */; };
 		57242F1F28A54DEA009231D3 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57242F1E28A54DEA009231D3 /* GamePresenter.swift */; };
+		57766F7628A5596D00C9F65B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57766F7528A5596D00C9F65B /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		57242F1A28A54DD6009231D3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		57242F1C28A54DE2009231D3 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		57242F1E28A54DEA009231D3 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		57766F7528A5596D00C9F65B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		57242F0B28A54CCC009231D3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				57766F7428A5596600C9F65B /* Extension */,
 				57242F1128A54CFD009231D3 /* Managers */,
 				57242F0C28A54CD2009231D3 /* Services */,
 			);
@@ -189,6 +192,14 @@
 				57242EED28A54ACA009231D3 /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		57766F7428A5596600C9F65B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				57766F7528A5596D00C9F65B /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				57242F1B28A54DD6009231D3 /* MainPresenter.swift in Sources */,
 				57242F1D28A54DE2009231D3 /* SettingsPresenter.swift in Sources */,
 				57242F1028A54CF9009231D3 /* GameService.swift in Sources */,
+				57766F7628A5596D00C9F65B /* UIView.swift in Sources */,
 				57242F0328A54C27009231D3 /* AuthViewController.swift in Sources */,
 				57242EFF28A54C14009231D3 /* MainViewController.swift in Sources */,
 				57242F1728A54D90009231D3 /* SplashPresenter.swift in Sources */,

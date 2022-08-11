@@ -15,6 +15,11 @@ final class AuthPresenter {
     
     weak var viewController: AuthViewProtocol?
     
+    private let sceneBuildManager: Buildable
+    
+    init(sceneBuildManager: Buildable) {
+        self.sceneBuildManager = sceneBuildManager
+    }
 }
 
 // MARK: - AuthPresenterProtocol

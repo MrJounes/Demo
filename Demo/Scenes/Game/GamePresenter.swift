@@ -15,6 +15,11 @@ final class GamePresenter {
     
     weak var viewController: GameViewProtocol?
     
+    private let sceneBuildManager: Buildable
+    
+    init(sceneBuildManager: Buildable) {
+        self.sceneBuildManager = sceneBuildManager
+    }
 }
 
 // MARK: - GamePresenterProtocol
