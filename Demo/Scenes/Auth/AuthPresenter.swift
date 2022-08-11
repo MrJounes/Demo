@@ -7,7 +7,9 @@
 
 // MARK: - AuthPresenterProtocol
 protocol AuthPresenterProtocol: AnyObject {
-    
+    func didTapPlayButton()
+    func didTapAuthButton()
+    func didTapRegisterButton()
 }
 
 // MARK: - AuthPresenter
@@ -24,5 +26,15 @@ final class AuthPresenter {
 
 // MARK: - AuthPresenterProtocol
 extension AuthPresenter: AuthPresenterProtocol {
+    func didTapPlayButton() {
+        print(#function)
+    }
     
+    func didTapAuthButton() {
+        print(#function)
+    }
+    
+    func didTapRegisterButton() {
+        print(#function)
+    }
 }
